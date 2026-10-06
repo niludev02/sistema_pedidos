@@ -9,6 +9,7 @@ public class ProdutoCarrinho {
     private int quantity;
     private double total;
     private double discountPercentage;
+    private double discountedTotal;
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public ProdutoCarrinho() {
@@ -37,6 +38,10 @@ public class ProdutoCarrinho {
 
     public double getDiscountPercentage() {
         return discountPercentage;
+    }
+
+    public double getDiscountedTotal() {
+        return discountedTotal;
     }
 
     @Override

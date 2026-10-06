@@ -9,6 +9,7 @@ import java.util.Optional;
 
 import br.edu.fatecpg.model.RespostaCarrinhos;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class CarrinhoService {
@@ -32,6 +33,7 @@ public class CarrinhoService {
             }
 
             ObjectMapper mapper = new ObjectMapper();
+            mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             RespostaCarrinhos resposta =
                     mapper.readValue(response.body(), RespostaCarrinhos.class);
             return Optional.of(resposta);
