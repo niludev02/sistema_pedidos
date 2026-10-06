@@ -119,7 +119,13 @@ Function<Carrinho, String> formatar = c -> String.format(Locale.US,
 ## 🖥️ Exemplo de saída
 
 ```
-[COLE AQUI UM TRECHO DA SAÍDA DO SEU PROGRAMA]
+
+=== Carrinhos por número de produtos ===
+2 produto(s): 58 carrinho(s)
+3 produto(s): 36 carrinho(s)
+4 produto(s): 33 carrinho(s)
+5 produto(s): 42 carrinho(s)
+6 produto(s): 39 carrinho(s)
 ```
 
 ---
